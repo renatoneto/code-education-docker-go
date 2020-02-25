@@ -1,5 +1,5 @@
 FROM scratch
 
-COPY bin/sum /sum
+COPY gopath/bin/sum /sum
 
 CMD ["/sum"]
