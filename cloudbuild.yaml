@@ -4,14 +4,14 @@ steps:
     args:
       - 'install'
       - 'sum'
-    env: ['PROJECT_ROOT=sum']
+    env: ['GOPATH=/workspace']
 
   - name: 'gcr.io/cloud-builders/go'
     id: Executando testes
     args:
       - 'test'
       - 'sum'
-    env: ['PROJECT_ROOT=sum']
+    env: ['GOPATH=/workspace']
 
   - name: 'gcr.io/cloud-builders/docker'
     id: Executando docker build
