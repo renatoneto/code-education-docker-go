@@ -4,7 +4,7 @@ steps:
     args:
       - 'test'
       - 'sum'
-    env: ['GOPATH=/']
+    env: ['GOPATH=.']
 
   - name: 'gcr.io/cloud-builders/go'
     id: Executando go build
@@ -13,7 +13,7 @@ steps:
       - '-o'
       - 'sum'
       - '.'
-    env: ['GOPATH=/']
+    env: ['GOPATH=.']
 
   - name: 'gcr.io/cloud-builders/docker'
     id: Executando docker build
